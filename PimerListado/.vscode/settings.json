@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "deque": "cpp",
+        "__bit_reference": "cpp",
+        "queue": "cpp"
+    }
+}
