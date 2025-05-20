@@ -1,7 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
+
+
+//Lamnda function to sort the lastname by the first 2 caracters
+
+bool compareString(string a, string b){
+
+    return (a.substr(0,2) < b.substr(0,2));
+
+}
+
 
 
 int main(){
@@ -22,17 +33,12 @@ int main(){
             lastNames.push_back(apellido);
         }
 
-    stable_sort(lastNames.begin(),lastNames.end());
-
-    cout <<"Nombres ordenamos sin key"<<endl;
-    for (const auto& name : lastNames) {
-        cout << name << endl;
-    }
+    stable_sort(lastNames.begin(),lastNames.end(),compareString);
     
-    
+        for (const auto& name : lastNames) {
+            cout << name << endl;
+        }
     }
-
-
 
     return 0;
 }
